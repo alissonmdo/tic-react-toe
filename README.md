@@ -1,9 +1,11 @@
-# TIC-REACT-TOE
+# TIC-TAC-TOE-REACT-JS
 It's an upgrade from the React tutorial app. Better controls and looks!
 
-Made with create-react-app and SASS pre-compiled to CSS.
+The first of the tic-tac-toe-verse, a collection of Tic-tac-toe games built on different tecnologies. 
 
-[Check it out!](https://alisson.dev/tic-react-toe)
+This one is made with React (Javascript), SASS pre-compiled to CSS and deployed with gh-pages.
+
+[Check it out!](https://alisson.dev/tic-tac-toe-react-js)
 
 
 

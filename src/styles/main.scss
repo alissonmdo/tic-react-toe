@@ -1,29 +1,27 @@
-@import "./reset";
+@import './reset';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-
 * {
   box-sizing: border-box;
 }
-body{
+body {
   padding: 0;
   margin: 0;
-  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-
+  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 i {
   font-family: fontawesome;
-  
 }
 
 .app {
-  background: linear-gradient(143.77deg, #38E7FF -20.95%, #FF80CC 132.07%);  color: #fff;
+  background: linear-gradient(143.77deg, #38e7ff -20.95%, #ff80cc 132.07%);
+  color: #fff;
   border-radius: 30px;
-  padding: 30px;
+  padding: 20px 30px;
   max-width: 100vw;
   max-height: 100vh;
   display: flex;
@@ -38,9 +36,17 @@ i {
 .app-title {
   font-size: 2em;
   font-weight: bold;
+  padding: 10px 0;
+  @media screen and (max-width: 500px) {
+    font-size: 1.3em;
+    padding: 0;
+  }
 }
-.app-description{
-  padding: 0.2em 0;
+.app-description {
+  padding-bottom: 10px;
+  @media screen and (max-width: 500px) {
+    padding: 5px 0;
+  }
 }
 
 .board-row {
@@ -62,20 +68,18 @@ i {
   visibility: hidden;
 }
 
-
-
-.game-board{
+.game-board {
   @for $i from 1 through 3 {
-    .board-row:nth-child(#{$i}){
+    .board-row:nth-child(#{$i}) {
       @if $i == 1 {
         .square {
           border-top: none;
         }
-      } @else if $i == 2{
+      } @else if $i == 2 {
         .square {
           border-top: none;
         }
-      } @else if $i == 3{
+      } @else if $i == 3 {
         .square {
           border-top: none;
           border-bottom: none;
@@ -85,20 +89,27 @@ i {
   }
 }
 
-.square:nth-child(1){border-left: none;border-right: none}
-.square:nth-child(2){border-right: none;}
-.square:nth-child(3){border-right: none;}
+.square:nth-child(1) {
+  border-left: none;
+  border-right: none;
+}
+.square:nth-child(2) {
+  border-right: none;
+}
+.square:nth-child(3) {
+  border-right: none;
+}
 
-.square.square-x{
+.square.square-x {
   font-size: 4em;
   // color: $color-4th;
 }
 
-.square.square-o{
+.square.square-o {
   font-size: 4em;
   // color: $color-2nd;
 }
-.panel{
+.panel {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,7 +117,7 @@ i {
 
 .panel-buttons {
   display: flex;
-  font-family: font-awesome
+  font-family: font-awesome;
 }
 
 .panel-button {
@@ -118,18 +129,18 @@ i {
   color: white;
 }
 
-.panel-button:disabled{
+.panel-button:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.won-O{
-  .square-o{
+.won-O {
+  .square-o {
     color: gold;
   }
 }
 
-.won-X{
-  .square-x{
+.won-X {
+  .square-x {
     color: gold;
   }
 }
